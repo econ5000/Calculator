@@ -1,5 +1,30 @@
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/fragment"
-    android:name="com.example.emilioc.calculator.MainCalcActivityFragment"
-    tools:layout="@layout/fragment_main_calc" android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:focusable="false"
+    tools:layout="@layout/fragment_main_calc">
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/resultsFragment"
+        android:name="com.example.emilioc.calculator.MainCalcActivityFragment"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        tools:layout="@layout/fragment_main_calc" />
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/inputFragment"
+        android:layout_centerInParent="true"
+        android:name="com.example.emilioc.calculator.CalcButtonsFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        tools:layout="@layout/fragment_main_calc" />
+
+
+</RelativeLayout>
