@@ -1,11 +1,14 @@
 package com.example.emilioc.calculator;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
-public class MainCalcActivity extends AppCompatActivity {
+public class MainCalcActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,5 +37,10 @@ public class MainCalcActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void updateDisplay(View view) {
+
+        Log.d("test", ((Button)view).getText().toString());
     }
 }
