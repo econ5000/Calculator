@@ -39,8 +39,11 @@ public class MainCalcActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void updateDisplay(View view) {
+    public void inputButtonClicked(View view) {
 
-        Log.d("test", ((Button)view).getText().toString());
+        String buttonPressed = ((Button) view).getText().toString();
+        Log.d("test", buttonPressed);
+        MainCalcActivityFragment mainCalcActivityFragment = (MainCalcActivityFragment)getFragmentManager().findFragmentById(R.id.resultsFragment);
+        mainCalcActivityFragment.updateDisplay(buttonPressed);
     }
 }
