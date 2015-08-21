@@ -44,6 +44,6 @@ public class MainCalcActivity extends Activity {
         String buttonPressed = ((Button) view).getText().toString();
         Log.d("test", buttonPressed);
         MainCalcActivityFragment mainCalcActivityFragment = (MainCalcActivityFragment)getFragmentManager().findFragmentById(R.id.resultsFragment);
-        mainCalcActivityFragment.updateDisplay(buttonPressed);
+        mainCalcActivityFragment.setDisplay(buttonPressed);
     }
 }

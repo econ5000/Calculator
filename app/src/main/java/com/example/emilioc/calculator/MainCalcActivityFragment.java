@@ -11,7 +11,10 @@ import android.widget.TextView;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class MainCalcActivityFragment extends Fragment {
+public class MainCalcActivityFragment extends Fragment implements ICalcActivityView {
+
+
+
 
     public MainCalcActivityFragment() {
     }
@@ -22,9 +25,14 @@ public class MainCalcActivityFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_main_calc, container, false);
     }
 
-    public void updateDisplay(String input) {
 
-       //View view = getView().findViewById(R.id.textViewResults);
-       //((TextView)view).setText(input);
+
+    @Override
+    public void setDisplay(String value) {
+
+            @SuppressWarnings("ConstantConditions") View view = getView().findViewById(R.id.textViewResults);
+            if (view != null) {
+                ((TextView) view).setText(value);
+            }
     }
 }
